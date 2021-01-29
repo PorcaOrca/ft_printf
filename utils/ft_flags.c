@@ -6,12 +6,14 @@
 /*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 11:39:52 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/28 15:21:20 by lspazzin         ###   ########.fr       */
+/*   Updated: 2021/01/28 15:39:52 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char		*ft_flags(char * str, int *left, char *c_just)
 {
+	*left = 0;
+	*c_just = ' ';
 	if (*str == '-')
 	{
 		*left = 1;

@@ -5,54 +5,61 @@
 #                                                     +:+ +:+         +:+      #
 #    By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/01/19 09:53:47 by lspazzin          #+#    #+#              #
-#    Updated: 2021/01/28 15:31:55 by lspazzin         ###   ########.fr        #
+#    Created: 2021/01/29 09:24:53 by lspazzin          #+#    #+#              #
+#    Updated: 2021/01/29 13:27:23 by lspazzin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #  -*- Makefile -*-
 
-SRCS		=	printf.c
-				utils/ft_flags.c
-				sources/ft_bzero.c
+SRCS		=	ft_printf.c
 
-SRCS_BONUS	=	ft_lstadd_front.c \
-				ft_lstadd_back.c \
-				ft_lstmap.c \
-				ft_lstclear.c \
-				ft_lstlast.c \
-				ft_lstiter.c \
-				ft_lstdelone.c \
-				ft_lstnew.c \
-				ft_lstsize.c \
+UTILS		=	ft_flags.c\
+				ft_precision.c\
+				ft_widht.c
+
+LIBFT_FNCT	=	ft_bzero.c\
+				ft_calloc.c\
+				ft_isdigit.c\
+				ft_itoa.c\
+				ft_putchar_fd.c\
+				ft_strlen.c
+
+LIBFT_S		=	libft_fnct
+
+UTILS_S		=	utils
 
 FLAGS		=	-Wall -Wextra -Werror
 
 CC			=	gcc
 
-NAME		=	libft.a
+NAME		=	libftprintf.a
 
 RM			=	/bin/rm -f
 
 OBJCS		=	$(SRCS:.c=.o)
 
-OBJCS_BONUS	=	$(SRCS_BONUS:.c=.o)
+LIBFT_OBJCS	=	$(LIBFT_FNCT:%.c=$(LIBFT_S)/%.o)
 
-%.o:			%.c
-				$(CC) $(FLAGS) -c $<
+UTILS_OBJCS	=	$(UTILS:%.c=$(UTILS_S)/%.o)
 
-$(NAME):		$(OBJCS)
-				ar -rc $(NAME) $(OBJCS)
-				ranlib $(NAME)
+#$(LIBFT_S)/%.o:	$(LIBFT_S)/%.c
+#				$(CC) $(FLAGS) -c $<
 
-bonus:			$(NAME) $(OBJCS_BONUS)
-				ar -rc $(NAME) $(OBJCS_BONUS)
+#$(UTILS_S)/%.o:	$(UTILS_S)/%.c
+#				$(CC) $(FLAGS) -c $<
+
+#%.o:			%.c
+#				$(CC) $(FLAGS) -c $<
+
+$(NAME):		$(OBJCS) $(LIBFT_OBJCS) $(UTILS_OBJCS)
+				ar -rc $(NAME) $(OBJCS) $(LIBFT_OBJCS) $(UTILS_OBJCS)
 				ranlib $(NAME)
 
 all:			$(NAME)
 
 clean:
-				$(RM) $(OBJCS) $(OBJCS_BONUS)
+				$(RM) $(OBJCS) $(LIBFT_OBJCS) $(UTILS_OBJCS)
 
 karen:
 				@ norminette *.c

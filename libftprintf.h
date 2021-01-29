@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 12:03:13 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/28 14:59:46 by lspazzin         ###   ########.fr       */
+/*   Updated: 2021/01/29 13:26:30 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef LIBFTPRINTF_H
+# define LIBFTPRINTF_H
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -70,6 +70,7 @@ t_list			*ft_lstmap(t_list *l, void *(*f)(void *), void (*del)(void *));
 char			*ft_flags(char *, int *left, char *c_just);
 char			*ft_precision(char *str, int *prec, va_list argptr);
 char			*ft_widht(char *str, int *pad, va_list argptr);
+int				ft_printf(char *str, ...);
 
 
 

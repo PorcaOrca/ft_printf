@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_discriminator.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/13 17:29:04 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/28 14:43:17 by lspazzin         ###   ########.fr       */
+/*   Created: 2021/01/29 16:06:22 by lspazzin          #+#    #+#             */
+/*   Updated: 2021/01/29 16:09:44 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../libftprintf.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void		ft_discriminator(char *str,)
 {
-	void	*str;
-	int		i;
-
-	i = 0;
-	str = malloc(count * size);
-	if (str == NULL)
-		return (NULL);
-	ft_bzero(str, count * size);
-	return (str);
+	if (*str == 'd' || *str == 'i')
+		ft_integer();
+	else if (*str == 'u')
+		ft_unsigned_int();
+	else if (*str == 'x')
+		ft_low_hexa();
+	else if (*str == 'X')
+		ft_up_hexa();
+	else if (*str == 'c')
+		ft_character();
+	else if (*str == 's')
+		ft_string();
+	else if (*str == 'p')
+		ft_ptr_address();
 }

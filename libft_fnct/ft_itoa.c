@@ -6,11 +6,11 @@
 /*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 15:02:20 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/28 14:43:22 by lspazzin         ###   ########.fr       */
+/*   Updated: 2021/01/29 13:28:08 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../libftprintf.h"
 
 static char	*ft_convert(int nbr, int size)
 {

@@ -6,15 +6,15 @@
 /*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 12:57:40 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/28 14:55:47 by lspazzin         ###   ########.fr       */
+/*   Updated: 2021/01/29 13:25:13 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
-#include "../libft.h"
+#include "../libftprintf.h"
 
 char		*ft_widht(char *str, int *pad, va_list argptr)
  {
+	*pad = 0;
 	if (*str == '*')
 	{
 		*pad = va_arg(argptr, int);
