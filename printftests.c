@@ -6,7 +6,7 @@
 /*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 14:00:55 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/28 14:05:11 by lspazzin         ###   ########.fr       */
+/*   Updated: 2021/01/30 10:07:53 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int		main(void)
 {
-	printf("numero = %-8.5d", -256345);
+	printf("stringa = %10.3s", "banana");
 	return(0);
 }

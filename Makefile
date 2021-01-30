@@ -6,7 +6,7 @@
 #    By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/29 09:24:53 by lspazzin          #+#    #+#              #
-#    Updated: 2021/01/29 13:27:23 by lspazzin         ###   ########.fr        #
+#    Updated: 2021/01/30 11:28:23 by lspazzin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,14 +16,17 @@ SRCS		=	ft_printf.c
 
 UTILS		=	ft_flags.c\
 				ft_precision.c\
-				ft_widht.c
+				ft_widht.c\
+				ft_string.c\
+				ft_discriminator.c
 
 LIBFT_FNCT	=	ft_bzero.c\
 				ft_calloc.c\
 				ft_isdigit.c\
 				ft_itoa.c\
 				ft_putchar_fd.c\
-				ft_strlen.c
+				ft_strlen.c\
+				ft_putstr_fd.c
 
 LIBFT_S		=	libft_fnct
 

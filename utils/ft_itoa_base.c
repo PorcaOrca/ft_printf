@@ -6,7 +6,7 @@
 /*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 13:23:42 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/29 15:50:39 by lspazzin         ###   ########.fr       */
+/*   Updated: 2021/01/30 09:48:07 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,15 +50,4 @@ char		*ft_itoa_base(long nbr, char *base)
 	if (nbr < 0)
 		*dest = '-';
 	return (dest);
-}
-
-int		main(void)
-{
-	char	*out;
-
-	out = ft_itoa_base(-625384628367346, "0123456789ABCDEF");
-	write(1, "hexadecimal = |", 15);
-	write(1, out, ft_strlen(out));
-	write(1, "|\n", 2);
-	return(0);
 }

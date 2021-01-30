@@ -6,7 +6,7 @@
 /*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 12:03:13 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/29 13:26:30 by lspazzin         ###   ########.fr       */
+/*   Updated: 2021/01/30 10:54:50 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,10 +67,12 @@ void			ft_lstdelone(t_list *lst, void (*del)(void*));
 void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *l, void *(*f)(void *), void (*del)(void *));
-char			*ft_flags(char *, int *left, char *c_just);
+char			*ft_flags(char *, int *left, int *c_just);
 char			*ft_precision(char *str, int *prec, va_list argptr);
 char			*ft_widht(char *str, int *pad, va_list argptr);
 int				ft_printf(char *str, ...);
+void			ft_discriminator(char *str, int *flag, va_list argptr);
+void			ft_string(int *flag, va_list argptr);
 
 
 
