@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_start_up.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/30 11:01:45 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/30 17:25:06 by lspazzin         ###   ########.fr       */
+/*   Created: 2021/01/30 17:05:28 by lspazzin          #+#    #+#             */
+/*   Updated: 2021/01/30 17:08:52 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-#include <stdio.h>
+#include "../libftprintf.h"
 
-int		main(int argc, char *argv[])
+void		ft_start_up(t_flag	*flag)
 {
-	if (argc != 3)
-	printf("Sucker printf = |%5s|\n", "pizza pie");
-	ft_printf("My lol printf = |%5s|\n", "pizza pie");
-	return (0);
+	flag->left = 0;
+	flag->whidt_c = ' ';
+	flag->pad = 0;
+	flag->prec = 0;
 }

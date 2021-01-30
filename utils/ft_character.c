@@ -6,7 +6,13 @@
 /*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 09:57:07 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/30 09:57:42 by lspazzin         ###   ########.fr       */
+/*   Updated: 2021/01/30 15:09:35 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../libftprintf.h"
+
+void		ft_character(int *flag, va_list argptr)
+{
+
+}

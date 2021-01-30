@@ -6,44 +6,40 @@
 /*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 09:57:44 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/30 12:38:38 by lspazzin         ###   ########.fr       */
+/*   Updated: 2021/01/30 17:25:21 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libftprintf.h"
 
-static void	ft_padding(int *flag)
+static void	ft_padding(t_flag *flag)
 {
 	char	w_c;
 
-	w_c = ' ';
-	if (flag[1])
-		w_c = '0';
-	while (flag[2])
+	while (flag->pad)
 	{
-		write(1, &w_c, 1);
-		flag[2]--;
+		write(1, &flag->whidt_c, 1);
+		flag->pad--;
 	}
 }
 
-void	ft_string(int *flag, va_list argptr)
+void	ft_string(t_flag *flag, va_list argptr)
 {
 	char	*argstr;
-	char	*prec;
+	char	*prec_size;
 	int		strl;
 
 	argstr = va_arg(argptr, char *);
 	strl = ft_strlen(argstr);
-	if (flag[3] < strl && flag[3])
+	if (flag->prec < strl && flag->prec)
 	{
-		prec = &argstr[flag[3] - 1];
-		*prec = '\0';
+		prec_size = &argstr[flag->prec - 1];
+		*prec_size = '\0';
 	}
-	flag[2] -= strl;
-	write(1, "err4\n", 5);
-	if (!flag[0] && flag[2] > 0)
+	flag->pad -= strl;
+	if (!flag->left && flag->pad > 0)
 		ft_padding(flag);
 	ft_putstr_fd(argstr, 1);
-	if (flag[0] && flag[2] > 0)
+	if (flag->left && flag->left > 0)
 		ft_padding(flag);
 }

@@ -6,7 +6,7 @@
 #    By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/29 09:24:53 by lspazzin          #+#    #+#              #
-#    Updated: 2021/01/30 11:28:23 by lspazzin         ###   ########.fr        #
+#    Updated: 2021/01/30 17:24:43 by lspazzin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ UTILS		=	ft_flags.c\
 				ft_precision.c\
 				ft_widht.c\
 				ft_string.c\
-				ft_discriminator.c
+				ft_discriminator.c\
+				ft_start_up.c
 
 LIBFT_FNCT	=	ft_bzero.c\
 				ft_calloc.c\
