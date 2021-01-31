@@ -6,7 +6,7 @@
 /*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 08:42:31 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/30 17:14:51 by lspazzin         ###   ########.fr       */
+/*   Updated: 2021/01/31 09:45:23 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,13 @@ int		ft_printf(char *str, ...)
 			ft_discriminator(str, &flag, argptr);
 		}
 		else
+		{
 			write(1, str, 1);
+			flag.count++;
+		}
 		if (*str)
 			str++;
 	}
 	va_end(argptr);
-	return (1);
+	return (flag.count);
 }

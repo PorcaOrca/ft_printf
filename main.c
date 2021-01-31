@@ -6,7 +6,7 @@
 /*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 11:01:45 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/30 17:25:06 by lspazzin         ###   ########.fr       */
+/*   Updated: 2021/01/31 11:36:11 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,12 @@
 
 int		main(int argc, char *argv[])
 {
+	int		my_ret;
+	int		dumb_ret;
+
 	if (argc != 3)
-	printf("Sucker printf = |%5s|\n", "pizza pie");
-	ft_printf("My lol printf = |%5s|\n", "pizza pie");
+	dumb_ret = printf("Sucker printf = |%04.2c|\n", 'f');
+	my_ret = ft_printf("My lol printf = |%04.2c|\n", 'f');
+	printf("sucker return = |%d|\nmy return = |%6d|", dumb_ret, my_ret);
 	return (0);
 }

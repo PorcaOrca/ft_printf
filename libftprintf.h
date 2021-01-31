@@ -6,7 +6,7 @@
 /*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 12:03:13 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/30 17:20:01 by lspazzin         ###   ########.fr       */
+/*   Updated: 2021/01/31 11:40:24 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 typedef struct	s_flag
 {
+	int		count;
 	int		left;
 	char	whidt_c;
 	int		pad;
@@ -75,6 +76,7 @@ void			ft_lstdelone(t_list *lst, void (*del)(void*));
 void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *l, void *(*f)(void *), void (*del)(void *));
+
 char			*ft_flags(char *str, int *left, char *whidt_c);
 char			*ft_precision(char *str, int *prec, va_list argptr);
 char			*ft_widht(char *str, int *pad, va_list argptr);
@@ -82,8 +84,7 @@ int				ft_printf(char *str, ...);
 void			ft_discriminator(char *str, t_flag *flag, va_list argptr);
 void			ft_string(t_flag *flag, va_list argptr);
 void			ft_start_up(t_flag	*flag);
-
-
-
+void			ft_padding(t_flag *flag);
+void			ft_character(t_flag *flag, va_list argptr);
 
 #endif
