@@ -6,7 +6,7 @@
 /*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 11:39:52 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/30 17:13:57 by lspazzin         ###   ########.fr       */
+/*   Updated: 2021/01/31 15:21:46 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ char		*ft_flags(char *str, int *left, char *whidt_c)
 	}
 	if (*str == '0')
 	{
-		*whidt_c = '0';
+		if (!*left)
+			*whidt_c = '0';
 		str++;
 	}
 	return (str);

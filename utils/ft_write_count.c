@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_discriminator.c                                 :+:      :+:    :+:   */
+/*   ft_write_count.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/29 16:06:22 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/31 13:55:20 by lspazzin         ###   ########.fr       */
+/*   Created: 2021/01/31 13:28:03 by lspazzin          #+#    #+#             */
+/*   Updated: 2021/01/31 13:30:58 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libftprintf.h"
 
-void		ft_discriminator(char *str, t_flag *flag, va_list argptr)
+void		ft_write_count(char *str, int len, t_flag *flag)
 {
-	if (*str == 'd' || *str == 'i' || *str == 'u')
-		ft_integer(flag, argptr);
-	//else if (*str == 'x' || *str == 'X')
-	//	ft_hexa();
-	else if (*str == 'c')
-		ft_character(flag, argptr);
-	else if (*str == 's')
-		ft_string(flag, argptr);
-	//else if (*str == 'p')
-	//	ft_ptr_address();
+	write(1, str, len);
+	flag->count += len;
 }

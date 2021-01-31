@@ -6,7 +6,7 @@
 /*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 09:40:56 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/31 09:46:27 by lspazzin         ###   ########.fr       */
+/*   Updated: 2021/01/31 13:32:21 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@ void	ft_padding(t_flag *flag)
 {
 	while (flag->pad)
 	{
-		write(1, &flag->whidt_c, 1);
+		ft_write_count(&flag->whidt_c, 1, flag);
 		flag->pad--;
-		flag->count++;
 	}
 }

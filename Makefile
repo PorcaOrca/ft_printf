@@ -6,7 +6,7 @@
 #    By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/29 09:24:53 by lspazzin          #+#    #+#              #
-#    Updated: 2021/01/31 11:45:18 by lspazzin         ###   ########.fr        #
+#    Updated: 2021/01/31 13:56:57 by lspazzin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ UTILS		=	ft_flags.c\
 				ft_discriminator.c\
 				ft_start_up.c\
 				ft_padding.c\
+				ft_write_count.c
 
 LIBFT_FNCT	=	ft_bzero.c\
 				ft_calloc.c\
@@ -27,9 +28,11 @@ LIBFT_FNCT	=	ft_bzero.c\
 				ft_itoa.c\
 				ft_putchar_fd.c\
 				ft_strlen.c\
+				ft_itoa_base.c
 
 INDICATOR	=	ft_character.c\
-				ft_string.c
+				ft_string.c\
+				ft_integer.c
 
 
 LIBFT_S		=	libft_fnct

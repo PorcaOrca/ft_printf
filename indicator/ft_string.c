@@ -6,7 +6,7 @@
 /*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 09:57:44 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/31 10:06:58 by lspazzin         ###   ########.fr       */
+/*   Updated: 2021/01/31 13:34:13 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ void	ft_string(t_flag *flag, va_list argptr)
 	flag->pad -= strl;
 	if (!flag->left && flag->pad > 0)
 		ft_padding(flag);
-	write(1, argstr, strl);
-	flag->count += strl;
+	ft_write_count(argstr, strl, flag);
 	if (flag->left && flag->pad > 0)
 		ft_padding(flag);
 }

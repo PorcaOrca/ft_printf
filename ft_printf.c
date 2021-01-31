@@ -6,19 +6,21 @@
 /*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 08:42:31 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/31 09:45:23 by lspazzin         ###   ########.fr       */
+/*   Updated: 2021/01/31 15:15:48 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int		ft_printf(char *str, ...)
+int		ft_printf(const char *input, ...)
 {
 	va_list		argptr;
 	t_flag		flag;
+	char		*str;
 
+	str = (char *)input;
 	ft_start_up(&flag);
-	va_start(argptr, str);
+	va_start(argptr, input);
 	while (*str)
 	{
 		if (*str == '%')
