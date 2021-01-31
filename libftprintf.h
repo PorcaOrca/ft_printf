@@ -6,7 +6,7 @@
 /*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 12:03:13 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/31 15:16:22 by lspazzin         ###   ########.fr       */
+/*   Updated: 2021/01/31 16:08:34 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,6 @@ void			ft_character(t_flag *flag, va_list argptr);
 void			ft_write_count(char *str, int len, t_flag *flag);
 void			ft_integer(t_flag *flag, va_list argptr);
 char			*ft_itoa_base(long nbr, char *base);
+void	ft_hexa(t_flag *flag, va_list argptr, char *base);
 
 #endif
