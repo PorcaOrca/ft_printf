@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_widht.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 12:57:40 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/02/04 19:05:00 by marvin           ###   ########.fr       */
+/*   Updated: 2021/02/06 11:34:02 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libftprintf.h"
 
 char		*ft_widht(char *str, t_flag *flag, va_list argptr)
- {
+{
 	if (*str == '*')
 	{
 		flag->pad = va_arg(argptr, int);
@@ -21,6 +21,7 @@ char		*ft_widht(char *str, t_flag *flag, va_list argptr)
 		{
 			flag->pad = -flag->pad;
 			flag->left = 1;
+			flag->whidt_c = ' ';
 		}
 		str++;
 		return (str);
@@ -36,4 +37,4 @@ char		*ft_widht(char *str, t_flag *flag, va_list argptr)
 		return (str);
 	}
 	return (str);
- }
+}

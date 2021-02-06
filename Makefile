@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
+#    By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/29 09:24:53 by lspazzin          #+#    #+#              #
-#    Updated: 2021/02/05 17:38:25 by marvin           ###   ########.fr        #
+#    Updated: 2021/02/06 11:44:03 by lspazzin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,18 +25,17 @@ UTILS		=	ft_flags.c\
 LIBFT_FNCT	=	ft_bzero.c\
 				ft_calloc.c\
 				ft_isdigit.c\
-				ft_itoa.c\
 				ft_putchar_fd.c\
 				ft_strlen.c\
-				ft_itoa_base.c
+				ft_itoa_base.c\
+				ft_itoa_base_ptr.c
 
 INDICATOR	=	ft_character.c\
 				ft_string.c\
 				ft_integer.c\
 				ft_hexa.c\
 				ft_ptr_address.c\
-				ft_tillnow.c\
-				ft_double.c
+				ft_percent.c
 
 LIBFT_S		=	libft_fnct
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_precision.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 13:32:00 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/02/04 16:14:34 by marvin           ###   ########.fr       */
+/*   Updated: 2021/02/06 11:34:29 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char		*ft_precision(char *str, int *prec, va_list argptr)
 				*prec += (*str - '0');
 				str++;
 			}
-		return (str);
+			return (str);
 		}
 	}
 	return (str);

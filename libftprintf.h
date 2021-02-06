@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 12:03:13 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/02/05 17:38:12 by marvin           ###   ########.fr       */
+/*   Updated: 2021/02/06 11:43:44 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ size_t			ft_strlen(const char *str);
 void			*ft_calloc(size_t count, size_t size);
 int				ft_isdigit(int c);
 void			ft_putchar_fd(char c, int fd);
-char			*ft_itoa(int nbr);
-
 char			*ft_flags(char *str, int *left, char *whidt_c);
 char			*ft_precision(char *str, int *prec, va_list argptr);
 char			*ft_widht(char *str, t_flag *flag, va_list argptr);
@@ -48,7 +46,7 @@ void			ft_integer(t_flag *flag, va_list argptr, char *base);
 char			*ft_itoa_base(long nbr, char *base);
 void			ft_hexa(t_flag *flag, va_list argptr, char *base);
 void			ft_ptr_address(t_flag *flag, va_list argptr, char *base);
-void			ft_tillnow(t_flag *flag, va_list argptr);
-void			ft_double(t_flag *flag, va_list argptr);
+char			*ft_itoa_base_ptr(unsigned long long nbr, char *base);
+void			ft_percent(t_flag *flag);
 
 #endif

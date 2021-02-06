@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_discriminator.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 16:06:22 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/02/05 17:37:31 by marvin           ###   ########.fr       */
+/*   Updated: 2021/02/06 11:55:56 by lspazzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ void		ft_discriminator(char *str, t_flag *flag, va_list argptr)
 		ft_string(flag, argptr);
 	else if (*str == 'p')
 		ft_ptr_address(flag, argptr, "0123456789abcdef");
-	else if (*str == 'n')
-		ft_tillnow(flag, argptr);
-	else if (*str == 'f')
-		ft_double(flag, argptr);
+	else if (*str == '%')
+		ft_percent(flag);
 }
