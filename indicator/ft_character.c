@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_character.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 09:57:07 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/31 13:35:33 by lspazzin         ###   ########.fr       */
+/*   Updated: 2021/02/04 19:14:40 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@ void		ft_character(t_flag *flag, va_list argptr)
 {
 	char	argchar;
 
-	argchar = va_arg(argptr, int);
-	flag->pad--;
+	argchar = (char)va_arg(argptr, unsigned int);
+	if (flag->pad)
+		flag->pad--;
 	if (!flag->left)
 		ft_padding(flag);
 	ft_write_count(&argchar, 1, flag);

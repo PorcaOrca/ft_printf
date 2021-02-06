@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/29 09:24:53 by lspazzin          #+#    #+#              #
-#    Updated: 2021/01/31 16:10:36 by lspazzin         ###   ########.fr        #
+#    Updated: 2021/02/05 17:38:25 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,8 +33,10 @@ LIBFT_FNCT	=	ft_bzero.c\
 INDICATOR	=	ft_character.c\
 				ft_string.c\
 				ft_integer.c\
-				ft_hexa.c
-
+				ft_hexa.c\
+				ft_ptr_address.c\
+				ft_tillnow.c\
+				ft_double.c
 
 LIBFT_S		=	libft_fnct
 
@@ -42,7 +44,7 @@ UTILS_S		=	utils
 
 INDI_S		=	indicator
 
-FLAGS		=	-Wall -Wextra -Werror
+CCFLAG		=	-Wall -Wextra -Werror
 
 CC			=	gcc
 

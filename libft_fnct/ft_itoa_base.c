@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 13:23:42 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/30 09:48:07 by lspazzin         ###   ########.fr       */
+/*   Updated: 2021/02/05 15:32:59 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libftprintf.h"
 
-void		ft_converse(char *dest, char *base, long nbr, long factor)
+static void		ft_converse(char *dest, char *base, long nbr, long factor)
 {
 	int		mod;
 
@@ -20,11 +20,12 @@ void		ft_converse(char *dest, char *base, long nbr, long factor)
 	if (nbr < 0)
 		mod = -mod;
 	*dest = base[mod];
+	nbr /= factor;
 	if (nbr)
-		ft_converse(--dest, base, nbr / factor, factor);
+		ft_converse(--dest, base, nbr, factor);
 }
 
-char		*ft_itoa_base(long nbr, char *base)
+char			*ft_itoa_base(long nbr, char *base)
 {
 	long	temp;
 	long	size;

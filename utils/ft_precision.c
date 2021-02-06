@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_precision.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lspazzin <lspazzin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 13:32:00 by lspazzin          #+#    #+#             */
-/*   Updated: 2021/01/29 13:27:49 by lspazzin         ###   ########.fr       */
+/*   Updated: 2021/02/04 16:14:34 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char		*ft_precision(char *str, int *prec, va_list argptr)
 {
-	*prec = 0;
 	if (*str == '.')
 	{
 		str++;
+		*prec = 0;
 		if (*str == '*')
 		{
 			*prec = va_arg(argptr, int);
